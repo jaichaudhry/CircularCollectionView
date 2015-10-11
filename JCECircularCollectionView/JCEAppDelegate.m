@@ -18,47 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    NSArray *titleArray = @[@"First", @"Second", @"Third", @"Fourth"];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(150, 200, 150, 100)];
-    label.textColor = [UIColor blackColor];
-    label.font = [UIFont systemFontOfSize:12];
-    UIViewController *vc1 = [UIViewController new];
-    vc1.view.backgroundColor = [UIColor redColor];
-    label.text = @"First";
-    [vc1.view addSubview:label];
-    
-    UIViewController *vc2 = [UIViewController new];
-    vc2.view.backgroundColor = [UIColor yellowColor];
-    label = [[UILabel alloc] initWithFrame:CGRectMake(150, 200, 150, 100)];
-    label.textColor = [UIColor blackColor];
-    label.font = [UIFont systemFontOfSize:12];
-    label.text = @"Second";
-    [vc2.view addSubview:label];
-    
-    UIViewController *vc3 = [UIViewController new];
-    vc3.view.backgroundColor = [UIColor blueColor];
-    label = [[UILabel alloc] initWithFrame:CGRectMake(150, 200, 150, 100)];
-    label.textColor = [UIColor blackColor];
-    label.font = [UIFont systemFontOfSize:12];
-    label.text = @"Third";
-    [vc3.view addSubview:label];
-    
-    UIViewController *vc4 = [UIViewController new];
-    vc4.view.backgroundColor = [UIColor cyanColor];
-    label = [[UILabel alloc] initWithFrame:CGRectMake(150, 200, 150, 100)];
-    label.textColor = [UIColor blackColor];
-    label.font = [UIFont systemFontOfSize:12];
-    label.text = @"Fourth";
-    [vc4.view addSubview:label];
-    
-    JCECircularCollectionViewController *circularCollectionViewController = [[JCECircularCollectionViewController alloc] initWithTitleArray:titleArray dataViewControllers:@[vc1, vc2, vc3, vc4]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:circularCollectionViewController];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self.window makeKeyAndVisible];
-    self.window.rootViewController = navigationController;
-    
     return YES;
 }
 
