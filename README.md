@@ -1,6 +1,9 @@
 ## CircularCollectionView
 Circular Collection View along with circular scroll title view.
 
+This component is used for creating a circular collection view along with title in a scroll bar for those collection views.
+This can be useful for presenting multiple view controllers in one screen in a nice scrollable way.
+
 ## Pod
 You can use following command for integrating via cocoapods:
 ```
