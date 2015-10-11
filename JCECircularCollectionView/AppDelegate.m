@@ -51,12 +51,13 @@
     label.font = [UIFont systemFontOfSize:12];
     label.text = @"Fourth";
     [vc4.view addSubview:label];
-    JCECircularCollectionViewController *circularCollectionViewController = [[JCECircularCollectionViewController alloc] initWithTitleArray:titleArray andDataViewControllers:@[vc1, vc2, vc3, vc4]];
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:circularCollectionViewController];
+    
+    JCECircularCollectionViewController *circularCollectionViewController = [[JCECircularCollectionViewController alloc] initWithTitleArray:titleArray dataViewControllers:@[vc1, vc2, vc3, vc4]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:circularCollectionViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = circularCollectionViewController;
+    self.window.rootViewController = navigationController;
     
     return YES;
 }

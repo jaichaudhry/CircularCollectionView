@@ -8,6 +8,7 @@
 
 #import "JCECircularCollectionViewController.h"
 #import "JCETitleView.h"
+#import "JCEBorderLayer.h"
 
 static CGFloat const kTitleViewHeight = 35;
 
@@ -17,6 +18,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 
 @property (nonatomic, strong) UICollectionView *circularCollectionView;
 @property (nonatomic, strong) UIScrollView *titleScrollView;
+@property (nonatomic, strong) UIView *titleScrollDummyView;
 
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) NSArray *dataViewControllers;
@@ -36,40 +38,76 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
  */
 @property (nonatomic, assign) BOOL titleWasTapped;
 @property (nonatomic, assign) BOOL mainCollectionViewScrolled;
+@property (nonatomic, assign) BOOL defaultScrollViewsPostionSet;
+
+@property (nonatomic, assign) NSInteger numberOfTitlesVisible;
+
+@property (nonatomic, strong) JCEBorderLayer *arrowLayer;
 
 @end
 
 @implementation JCECircularCollectionViewController
 
-- (instancetype)initWithTitleArray:(NSArray *)titleArray andDataViewControllers:(NSArray *)dataViewControllers {
+- (instancetype)initWithTitleArray:(NSArray *)titleArray dataViewControllers:(NSArray *)dataViewControllers {
     if (self = [super init]) {
         _titleArray = titleArray;
         _dataViewControllers = dataViewControllers;
+        _numberOfTitlesVisible = 3;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self p_updateDataArrayAndTitleArray];
     [self p_initSubViews];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    CGSize viewSize = self.view.frame.size;
-    CGFloat yOffset = self.view.frame.origin.y;
-    _titleScrollView.frame = CGRectMake(0, yOffset, viewSize.width, kTitleViewHeight);
+    CGSize viewSize = self.view.bounds.size;
+    CGFloat yOffset = 0;
+    
+    _titleScrollDummyView.frame = CGRectMake(0, yOffset, viewSize.width, kTitleViewHeight);
+    _titleScrollView.frame = CGRectMake(0, 0, viewSize.width, kTitleViewHeight);
     CGFloat xOffset = 0;
-    CGFloat titleViewWidth = viewSize.width/3;
+    CGFloat titleViewWidth = viewSize.width/_numberOfTitlesVisible;
     for (JCETitleView *titleView in _titleScrollView.subviews) {
         titleView.frame = CGRectMake(xOffset, 0, titleViewWidth, kTitleViewHeight);
         xOffset += titleViewWidth;
     }
-    _titleScrollView.contentSize = CGSizeMake((viewSize.width * [_titleArray count])/3, kTitleViewHeight);
+    _titleScrollView.contentSize = CGSizeMake((viewSize.width * [_titleArray count])/_numberOfTitlesVisible, kTitleViewHeight);
     yOffset += kTitleViewHeight;
     
+    if (_showArrow) {
+        if (!_arrowLayer) {
+            _arrowLayer = [JCEBorderLayer new];
+            _arrowLayer.arrowDirection = JCEArrowDirectionUp;
+            UIColor *arrowColor = _arrowColor ? _arrowColor : [UIColor whiteColor];
+            _arrowLayer.arrowFillColor = arrowColor;
+            _arrowLayer.showArrow = YES;
+            _arrowLayer.arrowWidth = 12.0;
+            _arrowLayer.arrowHeight = 8.0;
+            _arrowLayer.arrowBorderColor = arrowColor;
+        }
+        _arrowLayer.arrowPoint = CGPointMake(viewSize.width/2, kTitleViewHeight);
+        _arrowLayer.frame = CGRectMake(0, 0, viewSize.width, kTitleViewHeight);
+        if ([_arrowLayer superlayer]) {
+            [_arrowLayer removeFromSuperlayer];
+        }
+        [_titleScrollDummyView.layer addSublayer:_arrowLayer];
+    }
+    
     _circularCollectionView.frame = CGRectMake(0,yOffset, viewSize.width, viewSize.height - kTitleViewHeight);
+    
+    if (!_defaultScrollViewsPostionSet) {
+        // Set the title scroll view and circular collection view to the first original item as the item at index 0 is fake inserted item.
+        [self p_setTitleColorAtIndex:1];
+        [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+        [_titleScrollView setContentOffset:CGPointMake(0, 0) animated:NO];
+        _defaultScrollViewsPostionSet = YES;
+    }
 }
 
 #pragma mark - UICollectionViewDataSource methods
@@ -97,7 +135,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if ([scrollView isEqual:_circularCollectionView]) {
-        _titleScrollView.contentOffset = CGPointMake((scrollView.contentOffset.x - self.view.frame.size.width) /3, scrollView.contentOffset.y);
+        _titleScrollView.contentOffset = CGPointMake((scrollView.contentOffset.x - self.view.frame.size.width)/_numberOfTitlesVisible, scrollView.contentOffset.y);
     }
 }
 
@@ -121,12 +159,12 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
         }
         if (currentIndex == [_titleArray count] - 1) {
             // Move to fake item of the title scroll view in the beggining.
-            [self p_setTitleColorAtIndex:1];
             [_titleScrollView scrollRectToVisible:CGRectMake(0, 0, viewWidth, kTitleViewHeight) animated:NO];
+            [self p_setTitleColorAtIndex:1];
         }
         if (currentIndex == 0) {
             //Move to the fake item of the title scroll view added in the end.
-            [_titleScrollView scrollRectToVisible:CGRectMake(viewWidth * ([_titleArray count] - 3) / 3, 0, viewWidth, kTitleViewHeight) animated:NO];
+            [_titleScrollView scrollRectToVisible:CGRectMake(viewWidth * ([_titleArray count] - 3) / _numberOfTitlesVisible, 0, viewWidth, kTitleViewHeight) animated:NO];
             [self p_setTitleColorAtIndex:[_titleArray count] - 2];
         }
     }
@@ -155,7 +193,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
             [_titleScrollView scrollRectToVisible:CGRectMake(0, 0, viewSize.width, kTitleViewHeight) animated:NO];
             [self p_setTitleColorAtIndex:1];
         } else if (_currentIndex == 0) {
-            [_titleScrollView scrollRectToVisible:CGRectMake(viewSize.width * ([_titleArray count] - 3) / 3, 0, viewSize.width, kTitleViewHeight) animated:NO];
+            [_titleScrollView scrollRectToVisible:CGRectMake(viewSize.width * ([_titleArray count] - 3) / _numberOfTitlesVisible, 0, viewSize.width, kTitleViewHeight) animated:NO];
             [self p_setTitleColorAtIndex:[_titleArray count] - 2];
         }
         _lastContentOffset = scrollView.contentOffset.x;
@@ -165,6 +203,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
          */
         if (_currentIndex == [_titleArray count] - 1) {
             [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+            [self p_setTitleColorAtIndex:1];
         }
         if (_currentIndex == 0) {
             [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:[_dataViewControllers count] - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
@@ -188,9 +227,9 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
     CGSize viewSize = self.view.frame.size;
     [self p_setTitleColorAtIndex:index];
     if (index == 0) {
-        [_titleScrollView setContentOffset:CGPointMake(-viewSize.width/3, 0) animated:YES];
+        [_titleScrollView setContentOffset:CGPointMake(-viewSize.width/_numberOfTitlesVisible, 0) animated:YES];
     } else {
-        [_titleScrollView scrollRectToVisible:CGRectMake((viewSize.width * (index - 1))/ 3, 0, viewSize.width, viewSize.height) animated:YES];
+        [_titleScrollView scrollRectToVisible:CGRectMake((viewSize.width * (index - 1))/ _numberOfTitlesVisible, 0, viewSize.width, viewSize.height) animated:YES];
     }
     [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
@@ -198,10 +237,14 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 #pragma mark - Private
 
 - (void)p_initSubViews {
+    _titleScrollDummyView = [UIView new];
+    [self.view addSubview:_titleScrollDummyView];
+    
     _titleScrollView = [[UIScrollView alloc] init];
-    _titleScrollView.backgroundColor = [UIColor whiteColor];
+    _titleScrollView.scrollEnabled = NO;
+    _titleScrollView.backgroundColor = [UIColor colorWithRed:211.0/255.0 green:211.0/255.0 blue:211.0/255.0 alpha:1.0];
     _titleScrollView.delegate = self;
-    [self.view addSubview:_titleScrollView];
+    [_titleScrollDummyView addSubview:_titleScrollView];
     
     for (int i = 0; i < [_titleArray count]; i++) {
         JCETitleView *titleView = [JCETitleView new];
@@ -220,13 +263,6 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
     _circularCollectionView.pagingEnabled = YES;
     _circularCollectionView.showsHorizontalScrollIndicator = false;
     [self.view addSubview:_circularCollectionView];
-    
-    [self.view layoutIfNeeded];
-
-    // Set the title scroll view and circular collection view to the first original item as the item at index 0 is fake inserted item.
-    [self p_setTitleColorAtIndex:1];
-    [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
-    [_titleScrollView setContentOffset:CGPointMake(0, 0) animated:NO];
 }
 
 - (UICollectionViewFlowLayout *)p_collectionViewLayout {

@@ -18,6 +18,7 @@
 		49A162C81BC6E7B600AD4AE7 /* JCETitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A162C71BC6E7B600AD4AE7 /* JCETitleView.m */; settings = {ASSET_TAGS = (); }; };
 		49A162CC1BC6EB5100AD4AE7 /* JCEViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A162CB1BC6EB5100AD4AE7 /* JCEViewUtils.m */; settings = {ASSET_TAGS = (); }; };
 		49A162D01BC6EC0A00AD4AE7 /* NSString+JCEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A162CF1BC6EC0A00AD4AE7 /* NSString+JCEAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		49A9A13F1BCA78070088F0A4 /* JCEBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A9A13E1BCA78070088F0A4 /* JCEBorderLayer.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		49A162CB1BC6EB5100AD4AE7 /* JCEViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCEViewUtils.m; sourceTree = "<group>"; };
 		49A162CE1BC6EC0A00AD4AE7 /* NSString+JCEAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JCEAdditions.h"; sourceTree = "<group>"; };
 		49A162CF1BC6EC0A00AD4AE7 /* NSString+JCEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JCEAdditions.m"; sourceTree = "<group>"; };
+		49A9A13D1BCA78070088F0A4 /* JCEBorderLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCEBorderLayer.h; sourceTree = "<group>"; };
+		49A9A13E1BCA78070088F0A4 /* JCEBorderLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCEBorderLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 		49A1628D1BC6E6A200AD4AE7 /* JCECircularCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				49A9A1391BCA77D40088F0A4 /* Layer */,
 				49A162CD1BC6EBE000AD4AE7 /* Categories */,
 				49A162C91BC6EB4000AD4AE7 /* Utils */,
 				49A162C51BC6E7A700AD4AE7 /* Views */,
@@ -187,6 +191,15 @@
 				49A162CF1BC6EC0A00AD4AE7 /* NSString+JCEAdditions.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		49A9A1391BCA77D40088F0A4 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				49A9A13D1BCA78070088F0A4 /* JCEBorderLayer.h */,
+				49A9A13E1BCA78070088F0A4 /* JCEBorderLayer.m */,
+			);
+			name = Layer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A9A13F1BCA78070088F0A4 /* JCEBorderLayer.m in Sources */,
 				49A162961BC6E6A200AD4AE7 /* ViewController.m in Sources */,
 				49A162931BC6E6A200AD4AE7 /* AppDelegate.m in Sources */,
 				49A162C31BC6E71100AD4AE7 /* JCECircularCollectionViewController.m in Sources */,

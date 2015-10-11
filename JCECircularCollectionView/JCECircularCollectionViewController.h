@@ -18,6 +18,12 @@
  *  @param dataViewControllers The view controllers whose views are to be presented in the circular collection view.
  *
  */
-- (instancetype)initWithTitleArray:(NSArray *)titleArray andDataViewControllers:(NSArray *)dataViewControllers;
+- (instancetype)initWithTitleArray:(NSArray *)titleArray dataViewControllers:(NSArray *)dataViewControllers;
+
+/**
+ *  This can be used to show the arrow for the selected controller.
+ */
+@property (nonatomic, assign) BOOL showArrow;
+@property (nonatomic, strong) UIColor *arrowColor;
 
 @end
