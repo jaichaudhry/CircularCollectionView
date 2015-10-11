@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A162901BC6E6A200AD4AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A1628F1BC6E6A200AD4AE7 /* main.m */; };
+		49A162931BC6E6A200AD4AE7 /* JCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A162921BC6E6A200AD4AE7 /* JCEAppDelegate.m */; };
+		49A162961BC6E6A200AD4AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A162951BC6E6A200AD4AE7 /* ViewController.m */; };
 		49A1629B1BC6E6A200AD4AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A1629A1BC6E6A200AD4AE7 /* Assets.xcassets */; };
 		49A1629E1BC6E6A200AD4AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A1629C1BC6E6A200AD4AE7 /* LaunchScreen.storyboard */; };
 		49A162A91BC6E6A200AD4AE7 /* JCECircularCollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A162A81BC6E6A200AD4AE7 /* JCECircularCollectionViewTests.m */; };
@@ -37,6 +40,11 @@
 
 /* Begin PBXFileReference section */
 		49A1628B1BC6E6A200AD4AE7 /* JCECircularCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCECircularCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A1628F1BC6E6A200AD4AE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49A162911BC6E6A200AD4AE7 /* JCEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCEAppDelegate.h; sourceTree = "<group>"; };
+		49A162921BC6E6A200AD4AE7 /* JCEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCEAppDelegate.m; sourceTree = "<group>"; };
+		49A162941BC6E6A200AD4AE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		49A162951BC6E6A200AD4AE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49A1629A1BC6E6A200AD4AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A1629D1BC6E6A200AD4AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49A1629F1BC6E6A200AD4AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +119,10 @@
 				49A162C91BC6EB4000AD4AE7 /* Utils */,
 				49A162C51BC6E7A700AD4AE7 /* Views */,
 				49A162C41BC6E76600AD4AE7 /* ViewController */,
+				49A162911BC6E6A200AD4AE7 /* JCEAppDelegate.h */,
+				49A162921BC6E6A200AD4AE7 /* JCEAppDelegate.m */,
+				49A162941BC6E6A200AD4AE7 /* ViewController.h */,
+				49A162951BC6E6A200AD4AE7 /* ViewController.m */,
 				49A1629A1BC6E6A200AD4AE7 /* Assets.xcassets */,
 				49A1629C1BC6E6A200AD4AE7 /* LaunchScreen.storyboard */,
 				49A1629F1BC6E6A200AD4AE7 /* Info.plist */,
@@ -122,6 +134,7 @@
 		49A1628E1BC6E6A200AD4AE7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49A1628F1BC6E6A200AD4AE7 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -322,9 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A9A13F1BCA78070088F0A4 /* JCEBorderLayer.m in Sources */,
+				49A162961BC6E6A200AD4AE7 /* ViewController.m in Sources */,
+				49A162931BC6E6A200AD4AE7 /* JCEAppDelegate.m in Sources */,
 				49A162C31BC6E71100AD4AE7 /* JCECircularCollectionViewController.m in Sources */,
 				49A162CC1BC6EB5100AD4AE7 /* JCEViewUtils.m in Sources */,
 				49A162C81BC6E7B600AD4AE7 /* JCETitleView.m in Sources */,
+				49A162901BC6E6A200AD4AE7 /* main.m in Sources */,
 				49A162D01BC6EC0A00AD4AE7 /* NSString+JCEAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
