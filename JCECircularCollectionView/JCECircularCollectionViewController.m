@@ -229,7 +229,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
     if (index == 0) {
         [_titleScrollView setContentOffset:CGPointMake(-viewSize.width/_numberOfTitlesVisible, 0) animated:YES];
     } else {
-        [_titleScrollView scrollRectToVisible:CGRectMake((viewSize.width * (index - 1))/ _numberOfTitlesVisible, 0, viewSize.width, viewSize.height) animated:YES];
+        [_titleScrollView scrollRectToVisible:CGRectMake((viewSize.width * (index - 1))/ _numberOfTitlesVisible, 0, viewSize.width, kTitleViewHeight) animated:YES];
     }
     [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }

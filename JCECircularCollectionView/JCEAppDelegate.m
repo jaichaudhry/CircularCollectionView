@@ -6,14 +6,14 @@
 //  Copyright © 2015 jce. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "JCEAppDelegate.h"
 #import "JCECircularCollectionViewController.h"
 
-@interface AppDelegate ()
+@interface JCEAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation JCEAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
