@@ -37,7 +37,6 @@ circularCollectionViewController.arrowColor = [UIColor whiteColor];
 
 ## Todo's
 
-1> Include example project.
-2> Make it more customizable.
+1> Make it more customizable.
 
 
