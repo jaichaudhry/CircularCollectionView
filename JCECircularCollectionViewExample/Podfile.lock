@@ -1,0 +1,10 @@
+PODS:
+  - CircularCollectionView (1.0.0)
+
+DEPENDENCIES:
+  - CircularCollectionView
+
+SPEC CHECKSUMS:
+  CircularCollectionView: 04e61b6f9880aa60b966d64e1d25045e553b2ff8
+
+COCOAPODS: 0.38.2
