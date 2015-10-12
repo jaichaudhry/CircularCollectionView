@@ -24,16 +24,35 @@ pod 'CircularCollectionView'
 ```
 #import "JCECircularCollectionViewController.h"
 ```
-2> Initialize JCECircularCollectionViewController with a title array and your view controllers.
+2> Initialize JCECircularCollectionViewController
 ```
-JCECircularCollectionViewController *circularCollectionViewController = [[JCECircularCollectionViewController alloc] initWithTitleArray:titleArray dataViewControllers:@[vc1, vc2, vc3, vc4]];
+JCECircularCollectionViewController *circularCollectionViewController = [[JCECircularCollectionViewController alloc] init];
+```
+3> Set datasource
+circularCollectionViewController.datasource = self;
 ```
 3> To show arrow set the show arrow flag and give arrow color.
 ```
 circularCollectionViewController.showArrow = YES;
 circularCollectionViewController.arrowColor = [UIColor whiteColor];
 ```
-4> That's it. Now you can use circularCollectionViewController as you want.
+4> Implement the data-source methods
+```
+- (NSInteger)numberOfItems {
+	return <total_number_of_items>;
+}
+
+- (NSString *)circularCollectionViewController:(JCECircularCollectionViewController *)circularCollectionViewController titleForItemAtIndex:(NSInteger)index {
+	// The title corresponding to the view controller to be presented. These will be shown in a scroll view.
+	return <title_to_be_displayed>;
+}
+
+- (UIViewController *)circularCollectionViewController:(JCECircularCollectionViewController *)circularCollectionViewController viewControllerForItemAtIndex:(NSInteger)index {
+	// The view controllers whose view would be presented in the circular collection view.
+	return <data-view-controller>;
+}
+```
+5> That's it. Now you can use circularCollectionViewController as you want.
 
 ## Todo's
 
