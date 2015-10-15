@@ -1,3 +1,8 @@
+[![Version](https://img.shields.io/badge/pod-v1.0.0-brightgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
+[![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
+[![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)](http://cocoapods.org/pods/CircularCollectionView)
+
+
 ## CircularCollectionView
 Circular Collection View along with circular scroll title view.
 
