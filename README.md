@@ -33,9 +33,6 @@ pod 'CircularCollectionView'
 ```
 JCECircularCollectionViewController *circularCollectionViewController = [[JCECircularCollectionViewController alloc] init];
 ```
-3> Set datasource
-circularCollectionViewController.datasource = self;
-```
 3> To show arrow set the show arrow flag and give arrow color.
 ```
 circularCollectionViewController.showArrow = YES;
@@ -62,5 +59,3 @@ circularCollectionViewController.arrowColor = [UIColor whiteColor];
 ## Todo's
 
 1> Make it more customizable.
-
-
