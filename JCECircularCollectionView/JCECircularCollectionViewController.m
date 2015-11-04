@@ -69,9 +69,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-
     [self p_prepareDataSource];
-
     [self p_updateDataArrayAndTitleArray];
     [self p_initSubViews];
 }
@@ -125,7 +123,8 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 #pragma mark - UICollectionViewDataSource methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _datasource ? [_datasource numberOfItems] : 0;
+    // 2 is added for 2 fake items
+    return _datasource ? [_datasource numberOfItems] + 2 : 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -268,6 +267,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
     }
 
     _itemMetadataArray = [NSArray arrayWithArray:itemsArray];
+    _itemsCount = _itemsCount + 2;
 }
 
 - (void)p_initSubViews {
