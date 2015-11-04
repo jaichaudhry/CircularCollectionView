@@ -14,14 +14,25 @@ static CGFloat const kTitleViewHeight = 35;
 
 static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIER";
 
+
+@interface JCECircularCollectionViewItemMetadata : NSObject
+@property (nonatomic, assign) NSInteger itemIndex;
+@property (nonatomic, copy) NSString *itemTitle;
+@property (nonatomic, copy) UIViewController *itemDataViewController;
+@end
+
+@implementation JCECircularCollectionViewItemMetadata
+@end
+
+
 @interface JCECircularCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *circularCollectionView;
 @property (nonatomic, strong) UIScrollView *titleScrollView;
 @property (nonatomic, strong) UIView *titleScrollDummyView;
 
-@property (nonatomic, strong) NSArray *titleArray;
-@property (nonatomic, strong) NSArray *dataViewControllers;
+@property (nonatomic, assign) NSInteger itemsCount;
+@property (nonatomic, strong) NSArray *itemMetadataArray;
 
 /**
  *  To know the scrolling direction.
@@ -48,10 +59,8 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 
 @implementation JCECircularCollectionViewController
 
-- (instancetype)initWithTitleArray:(NSArray *)titleArray dataViewControllers:(NSArray *)dataViewControllers {
+- (instancetype)init {
     if (self = [super init]) {
-        _titleArray = titleArray;
-        _dataViewControllers = dataViewControllers;
         _numberOfTitlesVisible = 3;
     }
     return self;
@@ -60,6 +69,9 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    [self p_prepareDataSource];
+
     [self p_updateDataArrayAndTitleArray];
     [self p_initSubViews];
 }
@@ -77,7 +89,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
         titleView.frame = CGRectMake(xOffset, 0, titleViewWidth, kTitleViewHeight);
         xOffset += titleViewWidth;
     }
-    _titleScrollView.contentSize = CGSizeMake((viewSize.width * [_titleArray count])/_numberOfTitlesVisible, kTitleViewHeight);
+    _titleScrollView.contentSize = CGSizeMake((viewSize.width * _itemsCount)/_numberOfTitlesVisible, kTitleViewHeight);
     yOffset += kTitleViewHeight;
     
     if (_showArrow) {
@@ -113,7 +125,7 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 #pragma mark - UICollectionViewDataSource methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [_dataViewControllers count];
+    return _datasource ? [_datasource numberOfItems] : 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -124,13 +136,13 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 #pragma mark - UICollectionViewDelegate methods
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *dataViewController = [_dataViewControllers objectAtIndex:indexPath.row];
-    [self p_displayDataViewController:dataViewController onCell:cell];
+    JCECircularCollectionViewItemMetadata *itemMetadata = [_itemMetadataArray objectAtIndex:indexPath.row];
+    [self p_displayDataViewController:itemMetadata.itemDataViewController onCell:cell];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *dataViewController = [_dataViewControllers objectAtIndex:indexPath.row];
-    [self p_removeDataViewController:dataViewController];
+    JCECircularCollectionViewItemMetadata *itemMetadata = [_itemMetadataArray objectAtIndex:indexPath.row];
+    [self p_removeDataViewController:itemMetadata.itemDataViewController];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -145,27 +157,27 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
         CGFloat viewWidth = self.view.frame.size.width;
         NSInteger currentIndex = (scrollView.contentOffset.x / viewWidth);
         _currentIndex = currentIndex;
-        CGFloat endingContentOffset = viewWidth * ([_dataViewControllers count] - 1);
+        CGFloat endingContentOffset = viewWidth * (_itemsCount - 1);
         
         if (scrollView.contentOffset.x == endingContentOffset) {
             // Move to fake item added in the begining.
             [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         } else if (scrollView.contentOffset.x == 0) {
             // Move to the fake item added in the end.
-            [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:[_dataViewControllers count] - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
+            [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:_itemsCount - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
         } else {
             // For all the other items in between.
             [self p_setTitleColorAtIndex:currentIndex];
         }
-        if (currentIndex == [_titleArray count] - 1) {
+        if (currentIndex == _itemsCount - 1) {
             // Move to fake item of the title scroll view in the beggining.
             [_titleScrollView scrollRectToVisible:CGRectMake(0, 0, viewWidth, kTitleViewHeight) animated:NO];
             [self p_setTitleColorAtIndex:1];
         }
         if (currentIndex == 0) {
             //Move to the fake item of the title scroll view added in the end.
-            [_titleScrollView scrollRectToVisible:CGRectMake(viewWidth * ([_titleArray count] - 3) / _numberOfTitlesVisible, 0, viewWidth, kTitleViewHeight) animated:NO];
-            [self p_setTitleColorAtIndex:[_titleArray count] - 2];
+            [_titleScrollView scrollRectToVisible:CGRectMake(viewWidth * (_itemsCount - 3) / _numberOfTitlesVisible, 0, viewWidth, kTitleViewHeight) animated:NO];
+            [self p_setTitleColorAtIndex:_itemsCount - 2];
         }
     }
 }
@@ -189,24 +201,24 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
         /**
          *  This is done to maintain the animation of main collection view when reaching to the fake items of title scroll view.
          */
-        if (_currentIndex == [_titleArray count] - 1) {
+        if (_currentIndex == _itemsCount - 1) {
             [_titleScrollView scrollRectToVisible:CGRectMake(0, 0, viewSize.width, kTitleViewHeight) animated:NO];
             [self p_setTitleColorAtIndex:1];
         } else if (_currentIndex == 0) {
-            [_titleScrollView scrollRectToVisible:CGRectMake(viewSize.width * ([_titleArray count] - 3) / _numberOfTitlesVisible, 0, viewSize.width, kTitleViewHeight) animated:NO];
-            [self p_setTitleColorAtIndex:[_titleArray count] - 2];
+            [_titleScrollView scrollRectToVisible:CGRectMake(viewSize.width * (_itemsCount - 3) / _numberOfTitlesVisible, 0, viewSize.width, kTitleViewHeight) animated:NO];
+            [self p_setTitleColorAtIndex:_itemsCount - 2];
         }
         _lastContentOffset = scrollView.contentOffset.x;
     } else if ([scrollView isEqual:_circularCollectionView]) {
         /**
          *  This is done to maintain the animation of main collection view when reaching to the fake items of title scroll view.
          */
-        if (_currentIndex == [_titleArray count] - 1) {
+        if (_currentIndex == _itemsCount - 1) {
             [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
             [self p_setTitleColorAtIndex:1];
         }
         if (_currentIndex == 0) {
-            [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:[_dataViewControllers count] - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
+            [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:_itemsCount - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
         }
     }
 }
@@ -236,6 +248,28 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 
 #pragma mark - Private
 
+- (void)p_prepareDataSource {
+    _itemsCount = 0;
+    if (_datasource && [_datasource respondsToSelector:@selector(numberOfItems)]) {
+        _itemsCount = [_datasource numberOfItems];
+    }
+
+    NSMutableArray *itemsArray = _itemsCount > 0 ? [NSMutableArray arrayWithCapacity:_itemsCount] : [NSMutableArray array];
+    for (NSInteger itemIndex = 0; itemIndex < _itemsCount; itemIndex++) {
+        JCECircularCollectionViewItemMetadata *itemMetadata = [JCECircularCollectionViewItemMetadata new];
+        itemMetadata.itemIndex = itemIndex;
+        if (_datasource && [_datasource respondsToSelector:@selector(circularCollectionViewController:titleForItemAtIndex:)]) {
+            itemMetadata.itemTitle = [_datasource circularCollectionViewController:self titleForItemAtIndex:itemIndex];
+        }
+        if (_datasource && [_datasource respondsToSelector:@selector(circularCollectionViewController:viewControllerForItemAtIndex:)]) {
+            itemMetadata.itemDataViewController = [_datasource circularCollectionViewController:self viewControllerForItemAtIndex:itemIndex];
+        }
+        [itemsArray addObject:itemMetadata];
+    }
+
+    _itemMetadataArray = [NSArray arrayWithArray:itemsArray];
+}
+
 - (void)p_initSubViews {
     _titleScrollDummyView = [UIView new];
     [self.view addSubview:_titleScrollDummyView];
@@ -246,9 +280,10 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
     _titleScrollView.delegate = self;
     [_titleScrollDummyView addSubview:_titleScrollView];
     
-    for (int i = 0; i < [_titleArray count]; i++) {
+    for (NSInteger i = 0; i < _itemsCount; i++) {
         JCETitleView *titleView = [JCETitleView new];
-        titleView.titleLabel.text = [_titleArray objectAtIndex:i];
+        JCECircularCollectionViewItemMetadata *itemMetadata = [_itemMetadataArray objectAtIndex:i];
+        titleView.titleLabel.text = itemMetadata.itemTitle;
         [_titleScrollView addSubview:titleView];
         
         UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_titleViewTapped:)];
@@ -276,22 +311,18 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
  *  Adding fake items to both ends of title scroll view and circular collection view for circular funcationality.
  */
 - (void)p_updateDataArrayAndTitleArray {
-    UIViewController *firstViewController = [_dataViewControllers firstObject];
-    UIViewController *lastViewController = [_dataViewControllers lastObject];
-    NSMutableArray *mutableViewControllersArray = [NSMutableArray arrayWithArray:_dataViewControllers];
-    [mutableViewControllersArray insertObject:lastViewController atIndex:0];
-    [mutableViewControllersArray addObject:firstViewController];
-    _dataViewControllers = [mutableViewControllersArray copy];
-    
-    NSString *firstTitle = [_titleArray firstObject];
-    NSString *lastTitle = [_titleArray lastObject];
-    NSMutableArray *titleWorkinArray = [NSMutableArray arrayWithArray:_titleArray];
-    [titleWorkinArray insertObject:lastTitle atIndex:0];
-    [titleWorkinArray addObject:firstTitle];
-    _titleArray = titleWorkinArray;
+    JCECircularCollectionViewItemMetadata *firstItemMetadata = [_itemMetadataArray firstObject];
+    JCECircularCollectionViewItemMetadata *lastItemMetadata = [_itemMetadataArray lastObject];
+    NSMutableArray *mutableItemsMetadataArray = [NSMutableArray arrayWithArray:_itemMetadataArray];
+    [mutableItemsMetadataArray insertObject:lastItemMetadata atIndex:0];
+    [mutableItemsMetadataArray addObject:firstItemMetadata];
+    _itemMetadataArray = [mutableItemsMetadataArray copy];
 }
 
 - (void)p_displayDataViewController: (UIViewController*)dataViewController onCell:(UICollectionViewCell *)cell {
+    if (dataViewController == nil) {
+        return;
+    }
     [self addChildViewController:dataViewController];
     dataViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - kTitleViewHeight);
     [cell addSubview:dataViewController.view];
