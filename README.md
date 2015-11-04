@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/pod-v1.0.0-brightgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
+[![Version](https://img.shields.io/badge/pod-v1.2-brightgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
 [![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)](http://cocoapods.org/pods/CircularCollectionView)
 
@@ -12,7 +12,7 @@ This can be useful for presenting multiple view controllers in one screen in a n
 ## Pod
 You can use following command for integrating via cocoapods:
 ```
-pod 'CircularCollectionView'
+pod 'CircularCollectionView', '~> 1.2'
 ```
 ## Example
 (This is after 2 mins of integrating the controller.)
