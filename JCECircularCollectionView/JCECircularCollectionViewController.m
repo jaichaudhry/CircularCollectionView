@@ -17,8 +17,8 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
 
 @interface JCECircularCollectionViewItemMetadata : NSObject
 @property (nonatomic, assign) NSInteger itemIndex;
-@property (nonatomic, copy) NSString *itemTitle;
-@property (nonatomic, copy) UIViewController *itemDataViewController;
+@property (nonatomic, strong) NSString *itemTitle;
+@property (nonatomic, strong) UIViewController *itemDataViewController;
 @end
 
 @implementation JCECircularCollectionViewItemMetadata
