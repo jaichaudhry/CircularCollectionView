@@ -7,126 +7,123 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00B149F2AF61AE8F0A78E83E2A0A72F7 /* JCEViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC35AA140BED5874C66559E31F0046 /* JCEViewUtils.m */; };
-		0F1E0930AFCECAC735DA42EF006261D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 645FFF6CA75A4C174669817ECEBE1389 /* main.m */; };
-		131AFC7AAC9F5F76D17A2F22C9D6C919 /* JCEBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1E5BF9B58A7385046C08B6197A0387 /* JCEBorderLayer.h */; };
-		135BE305A9341D25E0E4DD5A5D3E5470 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552DCBD204127DD4047826A7D40CAE2F /* Foundation.framework */; };
-		30B63A4D224F380975C81FF785F55A13 /* Pods-JCECircularCollectionViewExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB424A5511476641AE1E95F7A61A5A2 /* Pods-JCECircularCollectionViewExample-dummy.m */; };
-		38E1608B0B21B75EB8019B40D8A3E871 /* JCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 038B438CCC7DA395BD8D99B44505F29A /* JCEAppDelegate.m */; };
-		3A043091ED88A32BE6B4D07EF1FAA299 /* JCEViewUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AFAAE2F07B1FE0C36D839FCE630A9DC /* JCEViewUtils.h */; };
-		3A773C563EBE13BA7BFD39C356251CF6 /* NSString+JCEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46EE3ADB1E9FF9D233F3D86AA93590 /* NSString+JCEAdditions.m */; };
-		626317ADD4A716CF03D90D64E9140A13 /* JCETitleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00066D7C0C3067692389A5B42727A02B /* JCETitleView.h */; };
-		739BA0B8F4C98964EE3B7E849FBA30EB /* JCEBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D666C5649A21740A683D4E20D0BE63 /* JCEBorderLayer.m */; };
-		79408A0256594E2385D2745F196A7307 /* JCETitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EB5FECB0AD32C071D8468167C9979A /* JCETitleView.m */; };
-		926DC18F84EFB59E1765CE022A220915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552DCBD204127DD4047826A7D40CAE2F /* Foundation.framework */; };
-		A6614731470C7D06FE81E17E22ED37FE /* CircularCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BF562F3BB96CA95D02F876C3396F9C /* CircularCollectionView-dummy.m */; };
-		BC656CE952FF02F680038E372511B7E1 /* JCEAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D3509AFE4194A56CE64AA49E457C9C /* JCEAppDelegate.h */; };
-		D9A80C6132FA62EEF773B2296EDF36FC /* JCECircularCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F70E947C8AE805625E339C8EE8EB79 /* JCECircularCollectionViewController.h */; };
-		DACA009BFE771E5989CCB5B8B91E96D4 /* JCECircularCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85093C9E0CE8E1B864F3D4E27800A814 /* JCECircularCollectionViewController.m */; };
-		FEFA947590C31FF09386AB7DCC610111 /* NSString+JCEAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 034CA14FA9A4EE8E4E81CB864A9F9475 /* NSString+JCEAdditions.h */; };
+		08E2B8292655DBA898863858819AF9FA /* CircularCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F67E7CA45CD30BFEFCC1397D3F1B8CE7 /* CircularCollectionView-dummy.m */; };
+		12BD9454077E778D287472A359A1FEC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		2DFDCF0607A3609B1DCD1FE6AB521FA8 /* JCETitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5333CB419E3D079A0C850BF38B3B672F /* JCETitleView.m */; };
+		3342B7854B118EA81F0E181AF2FB3B82 /* JCEBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 270A15F33691291740992DF9C88FDFEA /* JCEBorderLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		672C38941AE175FB23C94CE56D261D29 /* Pods-JCECircularCollectionViewExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F74E7FDD1F8A8A118E0E6F6F17D090 /* Pods-JCECircularCollectionViewExample-dummy.m */; };
+		8B885417CB693F608D950161258E8633 /* NSString+JCEAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EE578C8F6ECD37B10C9D512A0DADCD6B /* NSString+JCEAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A08606FD618D77194139D9D7F6F8CC25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B29ADAD3B30EBDBC8E040041D0C1BFBE /* NSString+JCEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B852E553EF4BB783EFA7DD0D25C3DC57 /* NSString+JCEAdditions.m */; };
+		BA304E5528875BA4DF6733B0778CADE0 /* JCEViewUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 901482008004A4612E8ECCF4EF2A4E66 /* JCEViewUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB8EC66A2C23E6562DF4D2ADF516554A /* JCEViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F465426E39B627C5B55337EF807A053 /* JCEViewUtils.m */; };
+		C3172110F4E61468F43003F871585DA1 /* JCEAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AE91EB1049E41D389907BDB9D551A6 /* JCEAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C809E5C5D80C2A3ED3C4C1B72FFCC874 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA97054193D07428979E5A2A9F430B /* main.m */; };
+		DC740F06A2B7DDC9380A768EEEAFA453 /* JCEBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B370A253D3CD4D431869882E8EF11489 /* JCEBorderLayer.m */; };
+		F52CF421F8D7F3E23348575C2EB731EA /* JCECircularCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CE8C9970CB50AF1E1A5ADFF614A465 /* JCECircularCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8A48021E968B9E43C8D12E43EE227F4 /* JCETitleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6502A2ACDCEF9342A726F678482F6DA4 /* JCETitleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBA1EAEFD46986B832E3E366DCED3832 /* JCECircularCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA456F7E6EFA552269124FFB13ACE26 /* JCECircularCollectionViewController.m */; };
+		FE894061830E6F29455AB0E7F18A35E3 /* JCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3F6C93D7DFAE28E1B49303DBC8271 /* JCEAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0FAC62DE986205DBFA56ED957BC4C7A0 /* PBXContainerItemProxy */ = {
+		4DEDBEF14C8521242A287F3C2057391F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2031711ED2DF218F946EE4F3D6C530AB;
+			remoteGlobalIDString = CB09416D040CDAA7AF8322AF3F244249;
 			remoteInfo = CircularCollectionView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00066D7C0C3067692389A5B42727A02B /* JCETitleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCETitleView.h; path = JCECircularCollectionView/JCETitleView.h; sourceTree = "<group>"; };
-		01D3509AFE4194A56CE64AA49E457C9C /* JCEAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCEAppDelegate.h; path = JCECircularCollectionView/JCEAppDelegate.h; sourceTree = "<group>"; };
-		0319EF848273F4A93F60DC47AF049C9E /* Pods-JCECircularCollectionViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JCECircularCollectionViewExample.debug.xcconfig"; sourceTree = "<group>"; };
-		034CA14FA9A4EE8E4E81CB864A9F9475 /* NSString+JCEAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+JCEAdditions.h"; path = "JCECircularCollectionView/NSString+JCEAdditions.h"; sourceTree = "<group>"; };
-		038B438CCC7DA395BD8D99B44505F29A /* JCEAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCEAppDelegate.m; path = JCECircularCollectionView/JCEAppDelegate.m; sourceTree = "<group>"; };
-		2D1E5BF9B58A7385046C08B6197A0387 /* JCEBorderLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCEBorderLayer.h; path = JCECircularCollectionView/JCEBorderLayer.h; sourceTree = "<group>"; };
-		48F400D4D5CD0BB0BE03CA9B106A7946 /* Pods-JCECircularCollectionViewExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JCECircularCollectionViewExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		50F70E947C8AE805625E339C8EE8EB79 /* JCECircularCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCECircularCollectionViewController.h; path = JCECircularCollectionView/JCECircularCollectionViewController.h; sourceTree = "<group>"; };
-		552DCBD204127DD4047826A7D40CAE2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		645FFF6CA75A4C174669817ECEBE1389 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = JCECircularCollectionView/main.m; sourceTree = "<group>"; };
-		67F5925099BA4FB8884EABE5CE38C02C /* libPods-JCECircularCollectionViewExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCECircularCollectionViewExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70048AD9973EEB2ED3230915B5FABEFE /* Pods-JCECircularCollectionViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JCECircularCollectionViewExample.release.xcconfig"; sourceTree = "<group>"; };
-		72D666C5649A21740A683D4E20D0BE63 /* JCEBorderLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCEBorderLayer.m; path = JCECircularCollectionView/JCEBorderLayer.m; sourceTree = "<group>"; };
-		85093C9E0CE8E1B864F3D4E27800A814 /* JCECircularCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCECircularCollectionViewController.m; path = JCECircularCollectionView/JCECircularCollectionViewController.m; sourceTree = "<group>"; };
-		85104FEC0E00F06BF82FAA4AB2868686 /* Pods-JCECircularCollectionViewExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JCECircularCollectionViewExample-resources.sh"; sourceTree = "<group>"; };
-		8AFAAE2F07B1FE0C36D839FCE630A9DC /* JCEViewUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCEViewUtils.h; path = JCECircularCollectionView/JCEViewUtils.h; sourceTree = "<group>"; };
-		8BDC35AA140BED5874C66559E31F0046 /* JCEViewUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCEViewUtils.m; path = JCECircularCollectionView/JCEViewUtils.m; sourceTree = "<group>"; };
-		B3534F87DDB77031FB4F7E1E304C01D2 /* CircularCollectionView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CircularCollectionView-Private.xcconfig"; sourceTree = "<group>"; };
+		19AA3D01ACF862B16FB9A69DD2BBD4A0 /* Pods-JCECircularCollectionViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JCECircularCollectionViewExample.debug.xcconfig"; sourceTree = "<group>"; };
+		1AF3F6C93D7DFAE28E1B49303DBC8271 /* JCEAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCEAppDelegate.m; path = JCECircularCollectionView/JCEAppDelegate.m; sourceTree = "<group>"; };
+		1F465426E39B627C5B55337EF807A053 /* JCEViewUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCEViewUtils.m; path = JCECircularCollectionView/JCEViewUtils.m; sourceTree = "<group>"; };
+		22CE8C9970CB50AF1E1A5ADFF614A465 /* JCECircularCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCECircularCollectionViewController.h; path = JCECircularCollectionView/JCECircularCollectionViewController.h; sourceTree = "<group>"; };
+		270A15F33691291740992DF9C88FDFEA /* JCEBorderLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCEBorderLayer.h; path = JCECircularCollectionView/JCEBorderLayer.h; sourceTree = "<group>"; };
+		304B86E0D221446318BB40D02BE68D32 /* libPods-JCECircularCollectionViewExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCECircularCollectionViewExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		43117E2CE499675E23C0311E24173D32 /* libCircularCollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCircularCollectionView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F74E7FDD1F8A8A118E0E6F6F17D090 /* Pods-JCECircularCollectionViewExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JCECircularCollectionViewExample-dummy.m"; sourceTree = "<group>"; };
+		5333CB419E3D079A0C850BF38B3B672F /* JCETitleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCETitleView.m; path = JCECircularCollectionView/JCETitleView.m; sourceTree = "<group>"; };
+		61AA7656AF4F413E895D59A68E3569A2 /* Pods-JCECircularCollectionViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JCECircularCollectionViewExample.release.xcconfig"; sourceTree = "<group>"; };
+		6502A2ACDCEF9342A726F678482F6DA4 /* JCETitleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCETitleView.h; path = JCECircularCollectionView/JCETitleView.h; sourceTree = "<group>"; };
+		6B6CFC1BF2D3EDC6EB967497060B4831 /* Pods-JCECircularCollectionViewExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JCECircularCollectionViewExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		7B2A4514511D76369C24EC3332222E4F /* CircularCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		901482008004A4612E8ECCF4EF2A4E66 /* JCEViewUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCEViewUtils.h; path = JCECircularCollectionView/JCEViewUtils.h; sourceTree = "<group>"; };
+		B04CF76267E86C3FD79BADCBDB676B61 /* CircularCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircularCollectionView.xcconfig; sourceTree = "<group>"; };
+		B058240710C6AE4C24ECCF02411CAE0B /* Pods-JCECircularCollectionViewExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JCECircularCollectionViewExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B370A253D3CD4D431869882E8EF11489 /* JCEBorderLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCEBorderLayer.m; path = JCECircularCollectionView/JCEBorderLayer.m; sourceTree = "<group>"; };
+		B852E553EF4BB783EFA7DD0D25C3DC57 /* NSString+JCEAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+JCEAdditions.m"; path = "JCECircularCollectionView/NSString+JCEAdditions.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C0EF27CE2B0FE1F7A91F5A6C54722142 /* CircularCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircularCollectionView.xcconfig; sourceTree = "<group>"; };
-		CD84EB6DFD759185D3ED61FDE0A38155 /* Pods-JCECircularCollectionViewExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JCECircularCollectionViewExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D605871A72F5BC982B564C379698E11E /* libCircularCollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCircularCollectionView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7BF562F3BB96CA95D02F876C3396F9C /* CircularCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircularCollectionView-dummy.m"; sourceTree = "<group>"; };
-		DB46EE3ADB1E9FF9D233F3D86AA93590 /* NSString+JCEAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+JCEAdditions.m"; path = "JCECircularCollectionView/NSString+JCEAdditions.m"; sourceTree = "<group>"; };
-		E4EB5FECB0AD32C071D8468167C9979A /* JCETitleView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCETitleView.m; path = JCECircularCollectionView/JCETitleView.m; sourceTree = "<group>"; };
-		FCB424A5511476641AE1E95F7A61A5A2 /* Pods-JCECircularCollectionViewExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JCECircularCollectionViewExample-dummy.m"; sourceTree = "<group>"; };
-		FF3206974944DC1011A959552B2F6308 /* CircularCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircularCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		D2AE91EB1049E41D389907BDB9D551A6 /* JCEAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JCEAppDelegate.h; path = JCECircularCollectionView/JCEAppDelegate.h; sourceTree = "<group>"; };
+		DCA456F7E6EFA552269124FFB13ACE26 /* JCECircularCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JCECircularCollectionViewController.m; path = JCECircularCollectionView/JCECircularCollectionViewController.m; sourceTree = "<group>"; };
+		E6DCB7E49D8A4B813D410F47E74C2B28 /* Pods-JCECircularCollectionViewExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JCECircularCollectionViewExample-frameworks.sh"; sourceTree = "<group>"; };
+		EBCA97054193D07428979E5A2A9F430B /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = JCECircularCollectionView/main.m; sourceTree = "<group>"; };
+		ECAF371E398C8B4F718AE998C921ED38 /* Pods-JCECircularCollectionViewExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JCECircularCollectionViewExample-resources.sh"; sourceTree = "<group>"; };
+		EE578C8F6ECD37B10C9D512A0DADCD6B /* NSString+JCEAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+JCEAdditions.h"; path = "JCECircularCollectionView/NSString+JCEAdditions.h"; sourceTree = "<group>"; };
+		F67E7CA45CD30BFEFCC1397D3F1B8CE7 /* CircularCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircularCollectionView-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		993E1190A214C71B483DB8823DB248D6 /* Frameworks */ = {
+		399FF2EB809708998C0C7B63C7D54174 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926DC18F84EFB59E1765CE022A220915 /* Foundation.framework in Frameworks */,
+				A08606FD618D77194139D9D7F6F8CC25 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDED56CE20215FDDAB27444162ECFCF0 /* Frameworks */ = {
+		5E56071B521F71D1E1BC1BAA5B6A05DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				135BE305A9341D25E0E4DD5A5D3E5470 /* Foundation.framework in Frameworks */,
+				12BD9454077E778D287472A359A1FEC4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04295E4E04F92C619F464A02BCFB7856 /* CircularCollectionView */ = {
+		153AEE2B3A7DD301CC0A856E5CDB3EED /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				01D3509AFE4194A56CE64AA49E457C9C /* JCEAppDelegate.h */,
-				038B438CCC7DA395BD8D99B44505F29A /* JCEAppDelegate.m */,
-				2D1E5BF9B58A7385046C08B6197A0387 /* JCEBorderLayer.h */,
-				72D666C5649A21740A683D4E20D0BE63 /* JCEBorderLayer.m */,
-				50F70E947C8AE805625E339C8EE8EB79 /* JCECircularCollectionViewController.h */,
-				85093C9E0CE8E1B864F3D4E27800A814 /* JCECircularCollectionViewController.m */,
-				00066D7C0C3067692389A5B42727A02B /* JCETitleView.h */,
-				E4EB5FECB0AD32C071D8468167C9979A /* JCETitleView.m */,
-				8AFAAE2F07B1FE0C36D839FCE630A9DC /* JCEViewUtils.h */,
-				8BDC35AA140BED5874C66559E31F0046 /* JCEViewUtils.m */,
-				034CA14FA9A4EE8E4E81CB864A9F9475 /* NSString+JCEAdditions.h */,
-				DB46EE3ADB1E9FF9D233F3D86AA93590 /* NSString+JCEAdditions.m */,
-				645FFF6CA75A4C174669817ECEBE1389 /* main.m */,
-				E67D6FEA03C45193DEC64EA92C4F6C1B /* Support Files */,
+				B04CF76267E86C3FD79BADCBDB676B61 /* CircularCollectionView.xcconfig */,
+				F67E7CA45CD30BFEFCC1397D3F1B8CE7 /* CircularCollectionView-dummy.m */,
+				7B2A4514511D76369C24EC3332222E4F /* CircularCollectionView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CircularCollectionView";
+			sourceTree = "<group>";
+		};
+		2DDFACB3328068DE43312F792AD8BC8F /* CircularCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D2AE91EB1049E41D389907BDB9D551A6 /* JCEAppDelegate.h */,
+				1AF3F6C93D7DFAE28E1B49303DBC8271 /* JCEAppDelegate.m */,
+				270A15F33691291740992DF9C88FDFEA /* JCEBorderLayer.h */,
+				B370A253D3CD4D431869882E8EF11489 /* JCEBorderLayer.m */,
+				22CE8C9970CB50AF1E1A5ADFF614A465 /* JCECircularCollectionViewController.h */,
+				DCA456F7E6EFA552269124FFB13ACE26 /* JCECircularCollectionViewController.m */,
+				6502A2ACDCEF9342A726F678482F6DA4 /* JCETitleView.h */,
+				5333CB419E3D079A0C850BF38B3B672F /* JCETitleView.m */,
+				901482008004A4612E8ECCF4EF2A4E66 /* JCEViewUtils.h */,
+				1F465426E39B627C5B55337EF807A053 /* JCEViewUtils.m */,
+				EBCA97054193D07428979E5A2A9F430B /* main.m */,
+				EE578C8F6ECD37B10C9D512A0DADCD6B /* NSString+JCEAdditions.h */,
+				B852E553EF4BB783EFA7DD0D25C3DC57 /* NSString+JCEAdditions.m */,
+				153AEE2B3A7DD301CC0A856E5CDB3EED /* Support Files */,
 			);
 			path = CircularCollectionView;
 			sourceTree = "<group>";
 		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+		376B9299FC2D70BDE7F3EC9D8FF98ECE /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				552DCBD204127DD4047826A7D40CAE2F /* Foundation.framework */,
+				B33D3147045DD15E7BC2FA7D59223ADB /* Pods-JCECircularCollectionViewExample */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		5D40EB7133B8479EAF1853BDABBC7218 /* Pods-JCECircularCollectionViewExample */ = {
-			isa = PBXGroup;
-			children = (
-				CD84EB6DFD759185D3ED61FDE0A38155 /* Pods-JCECircularCollectionViewExample-acknowledgements.markdown */,
-				48F400D4D5CD0BB0BE03CA9B106A7946 /* Pods-JCECircularCollectionViewExample-acknowledgements.plist */,
-				FCB424A5511476641AE1E95F7A61A5A2 /* Pods-JCECircularCollectionViewExample-dummy.m */,
-				85104FEC0E00F06BF82FAA4AB2868686 /* Pods-JCECircularCollectionViewExample-resources.sh */,
-				0319EF848273F4A93F60DC47AF049C9E /* Pods-JCECircularCollectionViewExample.debug.xcconfig */,
-				70048AD9973EEB2ED3230915B5FABEFE /* Pods-JCECircularCollectionViewExample.release.xcconfig */,
-			);
-			name = "Pods-JCECircularCollectionViewExample";
-			path = "Target Support Files/Pods-JCECircularCollectionViewExample";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -135,82 +132,102 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				CF8A78B96740AAFF5AE95D6AB21849D7 /* Pods */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				ACEE9B20B0FD7F98CCFA8D2C3DD3ACDF /* Targets Support Files */,
+				A62195B9D6396CBDC4D476524E6055BF /* Products */,
+				376B9299FC2D70BDE7F3EC9D8FF98ECE /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		ACEE9B20B0FD7F98CCFA8D2C3DD3ACDF /* Targets Support Files */ = {
+		A62195B9D6396CBDC4D476524E6055BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D40EB7133B8479EAF1853BDABBC7218 /* Pods-JCECircularCollectionViewExample */,
+				43117E2CE499675E23C0311E24173D32 /* libCircularCollectionView.a */,
+				304B86E0D221446318BB40D02BE68D32 /* libPods-JCECircularCollectionViewExample.a */,
 			);
-			name = "Targets Support Files";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B33D3147045DD15E7BC2FA7D59223ADB /* Pods-JCECircularCollectionViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				B058240710C6AE4C24ECCF02411CAE0B /* Pods-JCECircularCollectionViewExample-acknowledgements.markdown */,
+				6B6CFC1BF2D3EDC6EB967497060B4831 /* Pods-JCECircularCollectionViewExample-acknowledgements.plist */,
+				48F74E7FDD1F8A8A118E0E6F6F17D090 /* Pods-JCECircularCollectionViewExample-dummy.m */,
+				E6DCB7E49D8A4B813D410F47E74C2B28 /* Pods-JCECircularCollectionViewExample-frameworks.sh */,
+				ECAF371E398C8B4F718AE998C921ED38 /* Pods-JCECircularCollectionViewExample-resources.sh */,
+				19AA3D01ACF862B16FB9A69DD2BBD4A0 /* Pods-JCECircularCollectionViewExample.debug.xcconfig */,
+				61AA7656AF4F413E895D59A68E3569A2 /* Pods-JCECircularCollectionViewExample.release.xcconfig */,
+			);
+			name = "Pods-JCECircularCollectionViewExample";
+			path = "Target Support Files/Pods-JCECircularCollectionViewExample";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D605871A72F5BC982B564C379698E11E /* libCircularCollectionView.a */,
-				67F5925099BA4FB8884EABE5CE38C02C /* libPods-JCECircularCollectionViewExample.a */,
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF8A78B96740AAFF5AE95D6AB21849D7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04295E4E04F92C619F464A02BCFB7856 /* CircularCollectionView */,
+				2DDFACB3328068DE43312F792AD8BC8F /* CircularCollectionView */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E67D6FEA03C45193DEC64EA92C4F6C1B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C0EF27CE2B0FE1F7A91F5A6C54722142 /* CircularCollectionView.xcconfig */,
-				B3534F87DDB77031FB4F7E1E304C01D2 /* CircularCollectionView-Private.xcconfig */,
-				D7BF562F3BB96CA95D02F876C3396F9C /* CircularCollectionView-dummy.m */,
-				FF3206974944DC1011A959552B2F6308 /* CircularCollectionView-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CircularCollectionView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FA53A40F336107C4D1AAB6AA5BD45314 /* Headers */ = {
+		6391083039E61C59699F1622DC2D34B4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC656CE952FF02F680038E372511B7E1 /* JCEAppDelegate.h in Headers */,
-				131AFC7AAC9F5F76D17A2F22C9D6C919 /* JCEBorderLayer.h in Headers */,
-				D9A80C6132FA62EEF773B2296EDF36FC /* JCECircularCollectionViewController.h in Headers */,
-				626317ADD4A716CF03D90D64E9140A13 /* JCETitleView.h in Headers */,
-				3A043091ED88A32BE6B4D07EF1FAA299 /* JCEViewUtils.h in Headers */,
-				FEFA947590C31FF09386AB7DCC610111 /* NSString+JCEAdditions.h in Headers */,
+				C3172110F4E61468F43003F871585DA1 /* JCEAppDelegate.h in Headers */,
+				3342B7854B118EA81F0E181AF2FB3B82 /* JCEBorderLayer.h in Headers */,
+				F52CF421F8D7F3E23348575C2EB731EA /* JCECircularCollectionViewController.h in Headers */,
+				F8A48021E968B9E43C8D12E43EE227F4 /* JCETitleView.h in Headers */,
+				BA304E5528875BA4DF6733B0778CADE0 /* JCEViewUtils.h in Headers */,
+				8B885417CB693F608D950161258E8633 /* NSString+JCEAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2031711ED2DF218F946EE4F3D6C530AB /* CircularCollectionView */ = {
+		5CD398DCA9E4C20BFA9DEFD2D2FBFB2B /* Pods-JCECircularCollectionViewExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD0280CFE900F2D053ACD219726A6528 /* Build configuration list for PBXNativeTarget "CircularCollectionView" */;
+			buildConfigurationList = 3A797AAD6E62032637EE182D208592EE /* Build configuration list for PBXNativeTarget "Pods-JCECircularCollectionViewExample" */;
 			buildPhases = (
-				0CF21918232135100B8F696BBEF1E2A8 /* Sources */,
-				993E1190A214C71B483DB8823DB248D6 /* Frameworks */,
-				FA53A40F336107C4D1AAB6AA5BD45314 /* Headers */,
+				2DFEC05B0F5209CAE38CA9CCEFB8D122 /* Sources */,
+				5E56071B521F71D1E1BC1BAA5B6A05DC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06433C66F4BAB9238ECCE3736D6DE67D /* PBXTargetDependency */,
+			);
+			name = "Pods-JCECircularCollectionViewExample";
+			productName = "Pods-JCECircularCollectionViewExample";
+			productReference = 304B86E0D221446318BB40D02BE68D32 /* libPods-JCECircularCollectionViewExample.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CB09416D040CDAA7AF8322AF3F244249 /* CircularCollectionView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE1EE476D2560570B124F00EC5206EA4 /* Build configuration list for PBXNativeTarget "CircularCollectionView" */;
+			buildPhases = (
+				D36B3BD3F69147061736EE601B908056 /* Sources */,
+				399FF2EB809708998C0C7B63C7D54174 /* Frameworks */,
+				6391083039E61C59699F1622DC2D34B4 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -218,24 +235,7 @@
 			);
 			name = CircularCollectionView;
 			productName = CircularCollectionView;
-			productReference = D605871A72F5BC982B564C379698E11E /* libCircularCollectionView.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C448544892F1C0FD32238E60EDE1077C /* Pods-JCECircularCollectionViewExample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7F6B3D74337EB3EBA87C4A51A42AF88 /* Build configuration list for PBXNativeTarget "Pods-JCECircularCollectionViewExample" */;
-			buildPhases = (
-				F2BF085E9B81490F5E35E991417A4E15 /* Sources */,
-				DDED56CE20215FDDAB27444162ECFCF0 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5DF4E73FA0A7440BF5D3AF61F20D8C3A /* PBXTargetDependency */,
-			);
-			name = "Pods-JCECircularCollectionViewExample";
-			productName = "Pods-JCECircularCollectionViewExample";
-			productReference = 67F5925099BA4FB8884EABE5CE38C02C /* libPods-JCECircularCollectionViewExample.a */;
+			productReference = 43117E2CE499675E23C0311E24173D32 /* libCircularCollectionView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -255,90 +255,59 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = A62195B9D6396CBDC4D476524E6055BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2031711ED2DF218F946EE4F3D6C530AB /* CircularCollectionView */,
-				C448544892F1C0FD32238E60EDE1077C /* Pods-JCECircularCollectionViewExample */,
+				CB09416D040CDAA7AF8322AF3F244249 /* CircularCollectionView */,
+				5CD398DCA9E4C20BFA9DEFD2D2FBFB2B /* Pods-JCECircularCollectionViewExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0CF21918232135100B8F696BBEF1E2A8 /* Sources */ = {
+		2DFEC05B0F5209CAE38CA9CCEFB8D122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6614731470C7D06FE81E17E22ED37FE /* CircularCollectionView-dummy.m in Sources */,
-				38E1608B0B21B75EB8019B40D8A3E871 /* JCEAppDelegate.m in Sources */,
-				739BA0B8F4C98964EE3B7E849FBA30EB /* JCEBorderLayer.m in Sources */,
-				DACA009BFE771E5989CCB5B8B91E96D4 /* JCECircularCollectionViewController.m in Sources */,
-				79408A0256594E2385D2745F196A7307 /* JCETitleView.m in Sources */,
-				00B149F2AF61AE8F0A78E83E2A0A72F7 /* JCEViewUtils.m in Sources */,
-				3A773C563EBE13BA7BFD39C356251CF6 /* NSString+JCEAdditions.m in Sources */,
-				0F1E0930AFCECAC735DA42EF006261D6 /* main.m in Sources */,
+				672C38941AE175FB23C94CE56D261D29 /* Pods-JCECircularCollectionViewExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2BF085E9B81490F5E35E991417A4E15 /* Sources */ = {
+		D36B3BD3F69147061736EE601B908056 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B63A4D224F380975C81FF785F55A13 /* Pods-JCECircularCollectionViewExample-dummy.m in Sources */,
+				08E2B8292655DBA898863858819AF9FA /* CircularCollectionView-dummy.m in Sources */,
+				FE894061830E6F29455AB0E7F18A35E3 /* JCEAppDelegate.m in Sources */,
+				DC740F06A2B7DDC9380A768EEEAFA453 /* JCEBorderLayer.m in Sources */,
+				FBA1EAEFD46986B832E3E366DCED3832 /* JCECircularCollectionViewController.m in Sources */,
+				2DFDCF0607A3609B1DCD1FE6AB521FA8 /* JCETitleView.m in Sources */,
+				BB8EC66A2C23E6562DF4D2ADF516554A /* JCEViewUtils.m in Sources */,
+				C809E5C5D80C2A3ED3C4C1B72FFCC874 /* main.m in Sources */,
+				B29ADAD3B30EBDBC8E040041D0C1BFBE /* NSString+JCEAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5DF4E73FA0A7440BF5D3AF61F20D8C3A /* PBXTargetDependency */ = {
+		06433C66F4BAB9238ECCE3736D6DE67D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CircularCollectionView;
-			target = 2031711ED2DF218F946EE4F3D6C530AB /* CircularCollectionView */;
-			targetProxy = 0FAC62DE986205DBFA56ED957BC4C7A0 /* PBXContainerItemProxy */;
+			target = CB09416D040CDAA7AF8322AF3F244249 /* CircularCollectionView */;
+			targetProxy = 4DEDBEF14C8521242A287F3C2057391F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A2D5C395E55706D1379E417EEE9DF08 /* Release */ = {
+		4B145D4852C4AD139FD3D73B2DF8DAA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70048AD9973EEB2ED3230915B5FABEFE /* Pods-JCECircularCollectionViewExample.release.xcconfig */;
+			baseConfigurationReference = 19AA3D01ACF862B16FB9A69DD2BBD4A0 /* Pods-JCECircularCollectionViewExample.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		41FE9AC2AE33449C18E40D5C4BCECA49 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3534F87DDB77031FB4F7E1E304C01D2 /* CircularCollectionView-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CircularCollectionView/CircularCollectionView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		56F2FAF73112C78C2F6BDB7BC8EA8B9D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0319EF848273F4A93F60DC47AF049C9E /* Pods-JCECircularCollectionViewExample.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -422,9 +391,26 @@
 			};
 			name = Release;
 		};
-		D0F29375C7752B23D05CE851BA326EE8 /* Release */ = {
+		B2E2883E4A6FB4F3AC160D756AD66DF2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3534F87DDB77031FB4F7E1E304C01D2 /* CircularCollectionView-Private.xcconfig */;
+			baseConfigurationReference = 61AA7656AF4F413E895D59A68E3569A2 /* Pods-JCECircularCollectionViewExample.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D6B8551A649CAE02A834757A48A7A9D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04CF76267E86C3FD79BADCBDB676B61 /* CircularCollectionView.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/CircularCollectionView/CircularCollectionView-prefix.pch";
@@ -432,11 +418,31 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		FA4BAFBB39DCB48074B1C1AB949D0081 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04CF76267E86C3FD79BADCBDB676B61 /* CircularCollectionView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CircularCollectionView/CircularCollectionView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -450,20 +456,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD0280CFE900F2D053ACD219726A6528 /* Build configuration list for PBXNativeTarget "CircularCollectionView" */ = {
+		3A797AAD6E62032637EE182D208592EE /* Build configuration list for PBXNativeTarget "Pods-JCECircularCollectionViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				41FE9AC2AE33449C18E40D5C4BCECA49 /* Debug */,
-				D0F29375C7752B23D05CE851BA326EE8 /* Release */,
+				4B145D4852C4AD139FD3D73B2DF8DAA2 /* Debug */,
+				B2E2883E4A6FB4F3AC160D756AD66DF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7F6B3D74337EB3EBA87C4A51A42AF88 /* Build configuration list for PBXNativeTarget "Pods-JCECircularCollectionViewExample" */ = {
+		DE1EE476D2560570B124F00EC5206EA4 /* Build configuration list for PBXNativeTarget "CircularCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56F2FAF73112C78C2F6BDB7BC8EA8B9D /* Debug */,
-				0A2D5C395E55706D1379E417EEE9DF08 /* Release */,
+				FA4BAFBB39DCB48074B1C1AB949D0081 /* Debug */,
+				D6B8551A649CAE02A834757A48A7A9D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

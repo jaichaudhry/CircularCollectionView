@@ -176,6 +176,7 @@
 				49A9A2421BCAC21E0088F0A4 /* Frameworks */,
 				49A9A2431BCAC21E0088F0A4 /* Resources */,
 				7D3A1A88A281F82CAB1BF56E /* Copy Pods Resources */,
+				85225505B63F872950CDD09C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,6 +306,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JCECircularCollectionViewExample/Pods-JCECircularCollectionViewExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85225505B63F872950CDD09C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JCECircularCollectionViewExample/Pods-JCECircularCollectionViewExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AABB5A2509620B0CB71417F4 /* Check Pods Manifest.lock */ = {

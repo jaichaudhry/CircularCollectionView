@@ -8,17 +8,35 @@
 
 #import <UIKit/UIKit.h>
 
+@class JCECircularCollectionViewController;
+
+@protocol JCECircularCollectionViewControllerDataSource <NSObject>
+
+@required
+
+/**
+ * The object that provides the data for the collection view.
+ */
+- (NSInteger)numberOfItems;
+
+/**
+ * The titles corresponding to the view controllers to be presented. These will be shown in a scroll view.
+ */
+- (NSString *)circularCollectionViewController:(JCECircularCollectionViewController *)circularCollectionViewController titleForItemAtIndex:(NSInteger)index;
+
+/**
+ * The view controllers whose views are to be presented in the circular collection view.
+ */
+- (UIViewController *)circularCollectionViewController:(JCECircularCollectionViewController *)circularCollectionViewController viewControllerForItemAtIndex:(NSInteger)index;
+
+@end
+
 @interface JCECircularCollectionViewController : UIViewController
 
 /**
- *  To initialize with title array and data views array.
- *  Note: The title array count must be equal to data views count.
- *
- *  @param titleArray          The titles corresponding to the view controllers to be presented. These will be shown in a scroll view.
- *  @param dataViewControllers The view controllers whose views are to be presented in the circular collection view.
- *
+ * The object that provides the data for the collection view.
  */
-- (instancetype)initWithTitleArray:(NSArray *)titleArray dataViewControllers:(NSArray *)dataViewControllers;
+@property (nonatomic, weak) id <JCECircularCollectionViewControllerDataSource> datasource;
 
 /**
  *  This can be used to show the arrow for the selected controller.

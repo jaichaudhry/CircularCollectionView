@@ -1,10 +1,10 @@
 PODS:
-  - CircularCollectionView (1.0.0)
+  - CircularCollectionView (1.2)
 
 DEPENDENCIES:
-  - CircularCollectionView
+  - CircularCollectionView (~> 1.2)
 
 SPEC CHECKSUMS:
-  CircularCollectionView: 04e61b6f9880aa60b966d64e1d25045e553b2ff8
+  CircularCollectionView: e1eaf193c5049aa4ba304e2ebe72c9844b4e0c59
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
