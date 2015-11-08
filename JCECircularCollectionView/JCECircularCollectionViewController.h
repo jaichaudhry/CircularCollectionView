@@ -44,4 +44,6 @@
 @property (nonatomic, assign) BOOL showArrow;
 @property (nonatomic, strong) UIColor *arrowColor;
 
+- (NSInteger)currentSelectedIndex;
+
 @end

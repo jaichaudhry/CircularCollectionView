@@ -120,6 +120,20 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
     }
 }
 
+#pragma mark - Public methods
+
+- (NSInteger)currentSelectedIndex {
+    NSInteger currentIndex;
+    if (_currentIndex == 0) {
+        currentIndex = [_datasource numberOfItems] - 1;
+    } else if (_currentIndex == [_itemMetadataArray count] - 1) {
+        currentIndex = 0;
+    } else {
+        currentIndex = _currentIndex - 1;
+    }
+    return currentIndex;
+}
+
 #pragma mark - UICollectionViewDataSource methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
