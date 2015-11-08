@@ -192,6 +192,9 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
             [_titleScrollView scrollRectToVisible:CGRectMake(viewWidth * (_itemsCount - 3) / _numberOfTitlesVisible, 0, viewWidth, kTitleViewHeight) animated:NO];
             [self p_setTitleColorAtIndex:_itemsCount - 2];
         }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(circularCollectionViewController:didSelectTabAtIndex:)]) {
+            [self.delegate circularCollectionViewController:self didSelectTabAtIndex:[self currentSelectedIndex]];
+        }
     }
 }
 
@@ -232,6 +235,9 @@ static NSString *kCollectionViewReusableIdentifier = @"COLLECTION_VIEW_IDENTIFIE
         }
         if (_currentIndex == 0) {
             [_circularCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:_itemsCount - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
+        }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(circularCollectionViewController:didSelectTabAtIndex:)]) {
+            [self.delegate circularCollectionViewController:self didSelectTabAtIndex:[self currentSelectedIndex]];
         }
     }
 }
