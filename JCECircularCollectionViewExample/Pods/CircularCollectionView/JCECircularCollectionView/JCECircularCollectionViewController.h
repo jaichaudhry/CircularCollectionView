@@ -10,6 +10,8 @@
 
 @class JCECircularCollectionViewController;
 
+@protocol JCECircularCollectionViewControllerDelegate;
+
 @protocol JCECircularCollectionViewControllerDataSource <NSObject>
 
 @required
@@ -39,9 +41,22 @@
 @property (nonatomic, weak) id <JCECircularCollectionViewControllerDataSource> datasource;
 
 /**
+ * The delegate for the circular collection view.
+ */
+@property (nonatomic, weak) id <JCECircularCollectionViewControllerDelegate> delegate;
+
+/**
  *  This can be used to show the arrow for the selected controller.
  */
 @property (nonatomic, assign) BOOL showArrow;
 @property (nonatomic, strong) UIColor *arrowColor;
+
+- (NSInteger)currentSelectedIndex;
+
+@end
+
+@protocol JCECircularCollectionViewControllerDelegate <NSObject>
+
+- (void)circularCollectionViewController:(JCECircularCollectionViewController *)circularCollectionViewController didSelectTabAtIndex:(NSInteger)index;
 
 @end
