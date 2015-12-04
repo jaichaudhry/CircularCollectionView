@@ -12,7 +12,7 @@ This can be useful for presenting multiple view controllers in one screen in a n
 ## Pod
 You can use following command for integrating via cocoapods:
 ```
-pod 'CircularCollectionView', '~> 1.2'
+pod 'CircularCollectionView', '~> 1.3'
 ```
 ## Example
 (This is after 2 mins of integrating the controller.)
