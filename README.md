@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/pod-v1.2-brightgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
+[![Version](https://img.shields.io/badge/pod-v1.3-brightgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
 [![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg)](http://cocoapods.org/pods/CircularCollectionView)
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)](http://cocoapods.org/pods/CircularCollectionView)
 
